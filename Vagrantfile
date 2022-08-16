@@ -61,11 +61,11 @@ Vagrant.configure("2") do |config|
      apt-get install -y lxc
      apt-get install -y bridge-utils
      mkdir -p /home/vagrant/.config/lxc
-     sudo echo «lxc.id_map = u 0 100000 65536» >> /home/vagrant/.config/lxc/root.conf
-     sudo echo «lxc.id_map = g 0 100000 65536» >> /home/vagrant/.config/lxc/root.conf
-     sudo echo «lxc.network.type = veth» >> /home/vagrant/.config/lxc/root.conf
-     sudo echo «lxc.network.link = lxcbr0» >> /home/vagrant/.config/lxc/root.conf
-     sudo echo «lxc.network.flags = up» >> /home/vagrant/.config/lxc/root.conf
+     sudo echo "lxc.id_map = u 0 100000 65536" >> /home/vagrant/.config/lxc/root.conf
+     sudo echo "lxc.id_map = g 0 100000 65536" >> /home/vagrant/.config/lxc/root.conf
+     sudo echo "lxc.network.type = veth" >> /home/vagrant/.config/lxc/root.conf
+     sudo echo "lxc.network.link = lxcbr0" >> /home/vagrant/.config/lxc/root.conf
+     sudo echo "lxc.network.flags = up" >> /home/vagrant/.config/lxc/root.conf
      sudo echo kernel.unprivileged_userns_clone=1 >> /etc/sysctl.conf
      sudo echo "vagrant veth lxcbr0 10" >> /etc/lxc/lxc-usernet
      sudo echo "USE_LXC_BRIDGE="true"
